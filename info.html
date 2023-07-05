@@ -1,0 +1,70 @@
+<section>
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"><span style="color:DodgerBlue">I</span><span style="color:coral">D</span>-<span style="color:olivedrab">Pose</span>: Sparse-view Camera Pose Estimation by <span style="color:DodgerBlue">I</span>nverting <span style="color:coral">D</span>iffusion Models</h1>
+          <div class="is-size-5 publication-authors">
+            <!-- Paper authors -->
+            <span class="author-block">
+            <a href="https://www.cheng.website/" target="_blank">Weihao Cheng</a>,</span>
+            <span class="author-block">
+              <a href="https://yanpei.me/" target="_blank">Yan-Pei Cao</a>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=4oXBp9UAAAAJ" target="_blank">Ying Shan</a>
+              </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">ARC Lab<br>2023</span>
+            <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- ArXiv abstract Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2306.17140" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Github link -->
+              <span class="link-block">
+                <a href="https://github.com/xt4d/id-pose" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser is-light is-small">
+  <div class="column has-text-centered">
+    <video autoplay="" muted="" loop="" playsinline="" height="100%">
+      <source src="./res/toyduck.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="is-centered has-text-centered">
+      <h2 class="title is-3">Abstract</h2>
+      <h2 class="content has-text-justified">
+        Given sparse views of an object, estimating their camera poses is a long-standing and intractable problem. We harness the pre-trained diffusion model of novel views conditioned on viewpoints (Zero-1-to-3). We present ID-Pose which inverses the denoising diffusion process to estimate the relative pose given two input images. ID-Pose adds a noise on one image, and predicts the noise conditioned on the other image and a decision variable for the pose. The prediction error is used as the objective to find the optimal pose with the gradient descent method. ID-Pose can handle more than two images and estimate each of the poses with multiple image pairs from triangular relationships. ID-Pose requires no training and generalizes to real-world images. We conduct experiments using high-quality real-scanned 3D objects, where ID-Pose significantly outperforms state-of-the-art methods.
+      </h2>
+      <img src="res/teaser.png" width="100%"/>
+    </div>
+  </div>
+</section>
