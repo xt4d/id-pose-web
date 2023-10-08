@@ -1,5 +1,5 @@
 {
-    "cond_vid": 13,
+    "anchor_vid": 13,
     "obs": {
         "13": {
             "img_path": "013.png",

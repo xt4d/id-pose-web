@@ -70,6 +70,16 @@
 										<span>Code</span>
 									</a>
 								</span>
+
+								<span class="link-block">
+									<a href="viewer.html" target="_blank"
+										class="external-link button is-normal is-rounded is-dark">
+										<span class="icon">
+											<i class="fa fa-cube"></i>
+										</span>
+										<span>Examples</span>
+									</a>
+								</span>
 							</div>
 						</div>
 					</div>
@@ -105,69 +115,14 @@
 			</div>
 		</div>
 	</section>
-	<div id="viewer"><br></div>
-	<div class="container-fluid" id="viewer_main">
-		<div class="row">
-			<div class="col-1">
-			</div>
-			<div class="col-8">
-				<div class="row">
-					<div id="canvas_frame">
-						<canvas id="c"></canvas>
-					</div>
-				</div>
-				<div id="indicator"></div>
-				<hr>
-				<div class="row" id="image_list">
-				</div>
-			</div>
-			<div class="col-2">
-				<div class="title is-size-5">Object</div>
-				<div style="max-height: 300px; overflow:scroll">
-					<div class="list-group" id="obj_list" role="tablist">
-							<a class="list-group-item list-group-item-action active" data-toggle="list" role="tab" id="toyduck_photo">Toy Duck</a>
-							<a class="list-group-item list-group-item-action" data-toggle="list" role="tab" id="chair_photo">Chair</a>
-							<a class="list-group-item list-group-item-action" data-toggle="list" role="tab" id="foosball_photo">Foosball</a>
-							<a class="list-group-item list-group-item-action" data-toggle="list" role="tab" id="toycar_photo">Toy Car</a>
-							<a class="list-group-item list-group-item-action" data-toggle="list" role="tab" id="abo_couch_B07BWL4C2F">ABO: Couch</a>
-							<a class="list-group-item list-group-item-action" data-toggle="list" role="tab" id="abo_desk_B01MXKMRK4">ABO: Desk</a>
-							<a class="list-group-item list-group-item-action" data-toggle="list" role="tab" id="abo_chair_B0735WMNT5">ABO: Chair</a>
-							<a class="list-group-item list-group-item-action" data-toggle="list" role="tab" id="abo_shelf_B07B78G1D1">ABO: Shelf</a>
-					</div>
-				</div>
-				<hr>
-				<div class="title is-size-5">Views</div>
-				<div class="list-group" id="view_list" role="tablist">
-						<a class="list-group-item list-group-item-action active" data-toggle="list" role="tab" id="pose2">2 Views</a>
-						<a class="list-group-item list-group-item-action" data-toggle="list" role="tab" id="pose3">3 Views</a>
-						<a class="list-group-item list-group-item-action" data-toggle="list" role="tab" id="pose4">4 Views</a>
-				</div>
-				<hr>
-				<div>
-					<span>Light</soab>
-						<input type="range" class="form-control-range" id="light_intensity">
-				</div>
-				<div>
-					<span>Mesh Size</span>
-					<input type="range" class="form-control-range" id="mesh_size">
-				</div>
-				<br>
-				<div class="custom-control custom-switch">
-					<input type="checkbox" class="custom-control-input" id="switch_gt">
-					<label class="custom-control-label" for="switch_gt">GT Cameras</label>
-				</div>
-				<div class="custom-control custom-switch">
-					<input type="checkbox" class="custom-control-input" id="switch_dark">
-					<label class="custom-control-label" for="switch_dark">Dark Mode</label>
-				</div>
-			</div>
-			<div class="col-1">
+
+	<section>
+		<div id="viewer"><br>
+			<div class="is-centered has-text-centered">
+				<h2 class="title is-3">👉 Open <a href="viewer.html" target="_blank">Interactive Examples</a>.</h2>
 			</div>
 		</div>
-		<div class="row">
-		</div>
-	</div>
-	<hr>
+	</section>
 
 	<div id="cite"></div>
 
@@ -195,19 +150,16 @@
 
 <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
 
-<script type="importmap">
-	{
-		"imports": {
-			"three": "https://unpkg.com/three@0.152.0/build/three.module.js",
-			"three/addons/": "https://unpkg.com/three@0.152.0/examples/jsm/"
-		}
-	}
-</script>
-<script type="module" src="js/viewer.min.js"></script>
 <script> 
 	$(function(){
 		$("#cite").load("cite.html");
 	});
+</script>
+
+<script>
+    if(document.location.href.indexOf('#viewer') > -1) { 
+        document.location.href = 'viewer.html';
+    }
 </script>
 
 </html>

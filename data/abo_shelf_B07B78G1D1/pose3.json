@@ -1,5 +1,5 @@
 {
-    "cond_vid": 7,
+    "anchor_vid": 7,
     "obs": {
         "7": {
             "img_path": "007.png",
