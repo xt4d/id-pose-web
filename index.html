@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+
+<script>
+    if(document.location.href.indexOf('#viewer') > -1) { 
+        document.location.href = 'viewer.html';
+    }
+</script>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=yes, minimum-scale=1.0, maximum-scale=1.0">
@@ -117,6 +124,20 @@
 	</section>
 
 	<section>
+		<div class="column has-text-centered">
+			<video autoplay="" muted="" loop="" playsinline="" width="360">
+				<source src="./res/lion.mp4" type="video/mp4">
+			</video>
+			<video autoplay="" muted="" loop="" playsinline="" width="360">
+				<source src="./res/chair.mp4" type="video/mp4">
+			</video>
+			<video autoplay="" muted="" loop="" playsinline="" width="360">
+				<source src="./res/toycar.mp4" type="video/mp4">
+			</video>
+		</div>
+	</section>
+
+	<section>
 		<div id="viewer"><br>
 			<div class="is-centered has-text-centered">
 				<h2 class="title is-3">👉 Open <a href="viewer.html" target="_blank">Interactive Examples</a>.</h2>
@@ -154,12 +175,6 @@
 	$(function(){
 		$("#cite").load("cite.html");
 	});
-</script>
-
-<script>
-    if(document.location.href.indexOf('#viewer') > -1) { 
-        document.location.href = 'viewer.html';
-    }
 </script>
 
 </html>
