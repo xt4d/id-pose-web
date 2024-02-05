@@ -105,35 +105,71 @@
 	<section class="section">
 		<div class="container is-max-desktop">
 			<div class="is-centered has-text-centered">
-				<h2 class="title is-3">Abstract</h2>
-				<h2 class="content has-text-justified">
-					Given sparse views of an object, estimating their camera poses is a long-standing and intractable
-					problem. We harness the pre-trained diffusion model of novel views conditioned on viewpoints
-					(Zero-1-to-3). We present ID-Pose which inverses the denoising diffusion process to estimate the
-					relative pose given two input images. ID-Pose adds a noise on one image, and predicts the noise
-					conditioned on the other image and a decision variable for the pose. The prediction error is used as
-					the objective to find the optimal pose with the gradient descent method. ID-Pose can handle more
-					than two images and estimate each of the poses with multiple image pairs from triangular
-					relationships. ID-Pose requires no training and generalizes to real-world images. We conduct
-					experiments using high-quality real-scanned 3D objects, where ID-Pose significantly outperforms
-					state-of-the-art methods.
-				</h2>
+				<h2 class="title is-3">Overview</h2>
+				<div class="is-size-5 content is-centered has-text-left">
+					<li>ID-Pose estimates camera poses of sparse-view images (as few as 2) of a 3D object.</li>
+					<li>ID-Pose inversely uses the frozen <a href="https://zero123.cs.columbia.edu/">Zero123</a> to estimate camera poses by iteratively minimizing denoising errors given input images.</li>
+					<li>ID-Pose is a zero-shot method that requires NO additional model training or finetuning.</li>
+					<li>ID-Pose exhibits strong generalization ability on open-world images as the method effectively leverages the image priors from Zero123 (StableDiffusion).</li>
+				</div>
 				<img src="res/teaser.png" width="100%" />
 			</div>
 		</div>
 	</section>
 
 	<section>
+		<div class="is-centered has-text-centered">
+			<h3 class="title is-4">Daily Objects</h3>
+		</div>
 		<div class="column has-text-centered">
 			<video autoplay="" muted="" loop="" playsinline="" width="360">
-				<source src="./res/lion.mp4" type="video/mp4">
+				<source src="./res/toycar2_low.mp4" type="video/mp4">
 			</video>
 			<video autoplay="" muted="" loop="" playsinline="" width="360">
-				<source src="./res/chair.mp4" type="video/mp4">
+				<source src="./res/chair2_low.mp4" type="video/mp4">
 			</video>
 			<video autoplay="" muted="" loop="" playsinline="" width="360">
-				<source src="./res/toycar.mp4" type="video/mp4">
+				<source src="./res/foosball2_low.mp4" type="video/mp4">
 			</video>
+		</div>
+		<div class="is-centered has-text-centered">
+			<span style="color:#ff5555">&#9632;</span> Anchor <span style="color:#5555ff">&#9632</span> Estimated Pose
+		</div>
+		<br/>
+		<div class="is-centered has-text-centered">
+			<h3 class="title is-4">NAVI Objects (2 Views)</h3>
+		</div>
+		<div class="column has-text-centered">
+			<video autoplay="" muted="" loop="" playsinline="" width="360">
+				<source src="./res/bunny2_low.mp4" type="video/mp4">
+			</video>
+			<video autoplay="" muted="" loop="" playsinline="" width="360">
+				<source src="./res/circo2_low.mp4" type="video/mp4">
+			</video>
+			<video autoplay="" muted="" loop="" playsinline="" width="360">
+				<source src="./res/rhino2_low.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="is-centered has-text-centered">
+			<span style="color:#ff5555">&#9632;</span> Anchor <span style="color:#5555ff">&#9632</span> Estimated Pose <span style="color:#55ff55">&#9632</span> GT Pose
+		</div>
+		<br/>
+		<div class="is-centered has-text-centered">
+			<h3 class="title is-4">NAVI Objects (3 Views)</h3>
+		</div>
+		<div class="column has-text-centered">
+			<video autoplay="" muted="" loop="" playsinline="" width="360">
+				<source src="./res/bunny3_low.mp4" type="video/mp4">
+			</video>
+			<video autoplay="" muted="" loop="" playsinline="" width="360">
+				<source src="./res/circo3_low.mp4" type="video/mp4">
+			</video>
+			<video autoplay="" muted="" loop="" playsinline="" width="360">
+				<source src="./res/rhino3_low.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="is-centered has-text-centered">
+			<span style="color:#ff5555">&#9632;</span> Anchor <span style="color:#5555ff">&#9632</span> Estimated Pose <span style="color:#55ff55">&#9632</span> GT Pose
 		</div>
 	</section>
 
