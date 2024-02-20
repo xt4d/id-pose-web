@@ -95,11 +95,20 @@
 		</div>
 	</section>
 
-	<section class="hero teaser is-light is-small">
+	<section class="hero teaser">
 		<div class="column has-text-centered">
-			<video autoplay="" muted="" loop="" playsinline="" height="100%">
-				<source src="./res/toyduck.mp4" type="video/mp4">
-			</video>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9 align-self-center">
+						<img src="res/teaser.svg" width="100%" />
+					</div>
+					<div class="col-md-3 align-self-center">
+						<video autoplay="" muted="" loop="" playsinline="" width="100%">
+							<source src="./res/toyduck.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 	<section class="section">
@@ -107,12 +116,11 @@
 			<div class="is-centered has-text-centered">
 				<h2 class="title is-3">Overview</h2>
 				<div class="is-size-5 content is-centered has-text-left">
-					<li>ID-Pose estimates camera poses of sparse-view images (as few as 2) of a 3D object.</li>
-					<li>ID-Pose inversely uses the frozen <a href="https://zero123.cs.columbia.edu/">Zero123</a> to estimate camera poses by iteratively minimizing denoising errors given input images.</li>
+					<li>ID-Pose estimates camera poses of sparse-view images of a 3D object (overlaps not required).</li>
+					<li>ID-Pose inversely uses the off-the-shelf <a href="https://zero123.cs.columbia.edu/">Zero123</a> to estimate camera poses by iteratively minimizing denoising errors given input images.</li>
 					<li>ID-Pose is a zero-shot method that requires NO additional model training or finetuning.</li>
 					<li>ID-Pose exhibits strong generalization ability on open-world images as the method effectively leverages the image priors from Zero123 (StableDiffusion).</li>
 				</div>
-				<img src="res/teaser.png" width="100%" />
 			</div>
 		</div>
 	</section>
